@@ -34,12 +34,31 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
+a {
+  text-decoration:none;
+}
+
+a:visited {
+  color:#39c;
+  text-decoration:none;
+}
+
 a.goodlink {
   color:#39c;
   text-decoration:none;
 }
 
-a:hover {
+a.goodlink:visited {
+  color:#39c;
+  text-decoration:none;
+}
+
+a.goodlink:active {
+  color:#39c;
+  text-decoration:none;
+}
+
+a.goodlink:hover {
   color:#069;
 }
 
@@ -61,6 +80,11 @@ a.badlink {
 
 a.badlink:hover {
   text-decoration: underline;
+}
+
+a.badlink:visited {
+  color:red;
+  text-decoration:none;
 }
 
 .wrapper {

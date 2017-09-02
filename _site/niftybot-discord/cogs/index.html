@@ -12,17 +12,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.js" integrity="sha256-lsVOB+3Yhm6He5MkTO3Bw/Xw4NXK7wYYTi1Y+M/2PrM=" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="/assets/css/style.css?v=">
     <script src="/assets/js/wiki-features.js"></script>
 
     <script>
       $(document).ready(function() {
+      jQuery.migrateMute = true;
         var links = [];
           $('a').each(function() {
             links.push( this.href ); 
 
             var href = this.href;
+
             $.ajax({
               type: 'HEAD',
               url: href,
@@ -39,7 +43,7 @@
                   $('a[href="' + href + '"]').addClass("goodlink");
                 }
               }
-            });      
+            });
           });
         });
     </script>

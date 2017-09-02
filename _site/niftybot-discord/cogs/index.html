@@ -32,7 +32,7 @@
               },
               error: function(xhr, ajaxOptions, thrownError) {
                 if (xhr.status == 404) {
-                  altpath = href.replace('http://localhost:4000/', '')
+                  altpath = href.replace(, '')
                   $('a[href="' + href + '"]').addClass("badlink");
                   $('a[href="' + altpath + '"]').addClass("badlink");
                 }

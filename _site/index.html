@@ -29,30 +29,37 @@
     <!--
     <script>
       $(document).ready(function() {
-      jQuery.migrateMute = true;
         var links = [];
           $('a').each(function() {
             links.push( this.href ); 
 
             var href = this.href;
-            $.ajax({
-              type: 'HEAD',
-              url: href,
-              success: function() {
-                $('a[href="' + href + '"]').addClass("goodlink");
-              },
-              error: function(xhr, ajaxOptions, thrownError) {
-                if (xhr.status == 404) {
-                  altpath = href.replace('https://xnifty.github.io/', '')
-                  $('a[href="' + href + '"]').addClass("badlink");
-                  $('a[href="' + altpath + '"]').addClass("badlink");
+            var valid = href.startsWith('http://localhost:4000/')
+            alert(valid + ', ' + 'http://localhost:4000/' + ', ' + href);
+            if (valid == true) {
+              altpath = href.replace('http://localhost:4000/', '')
+              $.ajax({
+                type: 'HEAD',
+                url: href,
+                success: function() {
+                  $('a[href="' + href + '"]').addClass("goodlink");
+                  $('a[href="' + altpath + '"]').addClass("goodlink");
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                  if (xhr.status == 404) {
+                    $('a[href="' + href + '"]').addClass("badlink");
+                    $('a[href="' + altpath + '"]').addClass("badlink");
+                  }
+                  else {
+                    $('a[href^="' + href + '"]').addClass("goodlink");
+                    $('a[id="descriptionid"]').addClass("goodlink");
+                  }
                 }
-                else {
-                  $('a[href^="' + href + '"]').addClass("goodlink");
-                  $('a[id="descriptionid"]').addClass("goodlink");
-                }
-              }
-            });
+              });
+            } else {
+              $('a[href^="' + href + '"]').addClass("goodlink");
+              $('a[id="descriptionid"]').addClass("goodlink");
+            }
           });
         });
     </script>-->
@@ -110,6 +117,12 @@
 
 <ul>
   <li><a href="https://github.com/xnifty/niftybot-discord">niftybot-discord</a></li>
+</ul>
+
+<h2 id="internal-links">Internal Links</h2>
+<hr />
+<ul>
+  <li><a href="/niftybot-discord">niftybot-discord documentation</a></li>
 </ul>
 
 <p><strong>Note:</strong><br />

@@ -29,30 +29,37 @@
     <!--
     <script>
       $(document).ready(function() {
-      jQuery.migrateMute = true;
         var links = [];
           $('a').each(function() {
             links.push( this.href ); 
 
             var href = this.href;
-            $.ajax({
-              type: 'HEAD',
-              url: href,
-              success: function() {
-                $('a[href="' + href + '"]').addClass("goodlink");
-              },
-              error: function(xhr, ajaxOptions, thrownError) {
-                if (xhr.status == 404) {
-                  altpath = href.replace('{{ site.site_name }}', '')
-                  $('a[href="' + href + '"]').addClass("badlink");
-                  $('a[href="' + altpath + '"]').addClass("badlink");
+            var valid = href.startsWith('{{ site.site_name }}')
+            alert(valid + ', ' + '{{ site.site_name }}' + ', ' + href);
+            if (valid == true) {
+              altpath = href.replace('{{ site.site_name }}', '')
+              $.ajax({
+                type: 'HEAD',
+                url: href,
+                success: function() {
+                  $('a[href="' + href + '"]').addClass("goodlink");
+                  $('a[href="' + altpath + '"]').addClass("goodlink");
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                  if (xhr.status == 404) {
+                    $('a[href="' + href + '"]').addClass("badlink");
+                    $('a[href="' + altpath + '"]').addClass("badlink");
+                  }
+                  else {
+                    $('a[href^="' + href + '"]').addClass("goodlink");
+                    $('a[id="descriptionid"]').addClass("goodlink");
+                  }
                 }
-                else {
-                  $('a[href^="' + href + '"]').addClass("goodlink");
-                  $('a[id="descriptionid"]').addClass("goodlink");
-                }
-              }
-            });
+              });
+            } else {
+              $('a[href^="' + href + '"]').addClass("goodlink");
+              $('a[id="descriptionid"]').addClass("goodlink");
+            }
           });
         });
     </script>-->

@@ -35,6 +35,26 @@ h3, h4, h5, h6 {
 }
 
 a {
+  color:#39c;
+  text-decoration:none;
+}
+
+a:visited {
+  color:#39c;
+  text-decoration:none;
+}
+
+a:active {
+  color:#39c;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#069;
+}
+
+/*
+a {
   text-decoration:none;
 }
 
@@ -86,6 +106,7 @@ a.badlink:visited {
   color:red;
   text-decoration:none;
 }
+*/
 
 .wrapper {
   /*width:860px;*/

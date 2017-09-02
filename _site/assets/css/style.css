@@ -142,28 +142,48 @@ h2 { color: #393939; }
 
 h3, h4, h5, h6 { color: #494949; }
 
-a { text-decoration: none; }
+a { color: #39c; text-decoration: none; }
 
 a:visited { color: #39c; text-decoration: none; }
 
-a.goodlink { color: #39c; text-decoration: none; }
+a:active { color: #39c; text-decoration: none; }
 
-a.goodlink:visited { color: #39c; text-decoration: none; }
+a:hover { color: #069; }
 
-a.goodlink:active { color: #39c; text-decoration: none; }
+/*
+a { text-decoration:none;
+}
 
-a.goodlink:hover { color: #069; }
+a:visited { color:#39c; text-decoration:none;
+}
 
-a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
+a.goodlink { color:#39c; text-decoration:none;
+}
 
-a:hover small { color: #777; }
+a.goodlink:visited { color:#39c; text-decoration:none;
+}
 
-a.badlink { color: red; text-decoration: none; }
+a.goodlink:active { color:#39c; text-decoration:none;
+}
 
-a.badlink:hover { text-decoration: underline; }
+a.goodlink:hover { color:#069;
+}
 
-a.badlink:visited { color: red; text-decoration: none; }
+a small { font-size:11px; color:#777; margin-top:-0.3em; display:block;
+}
 
+a:hover small { color:#777;
+}
+
+a.badlink { color:red; text-decoration:none;
+}
+
+a.badlink:hover { text-decoration: underline;
+}
+
+a.badlink:visited { color:red; text-decoration:none;
+}
+*/
 .wrapper { /*width:860px;*/ margin: 0 auto; }
 
 blockquote { border-left: 1px solid #e5e5e5; margin: 0; padding: 0 0 0 20px; font-style: italic; }

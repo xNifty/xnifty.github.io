@@ -34,7 +34,7 @@
             links.push( this.href ); 
 
             var href = this.href;
-
+            console.log(this)
             $.ajax({
               type: 'HEAD',
               url: href,
@@ -48,7 +48,8 @@
                   $('a[href="' + altpath + '"]').addClass("badlink");
                 }
                 else {
-                  $('a[href="' + href + '"]').addClass("goodlink");
+                  $('a[href^="' + href + '"]').addClass("goodlink");
+                  $('a[id="descriptionid"]').addClass("goodlink");
                 }
               }
             });

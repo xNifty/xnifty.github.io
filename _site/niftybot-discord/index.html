@@ -26,7 +26,7 @@
             links.push( this.href ); 
 
             var href = this.href;
-
+            console.log(this)
             $.ajax({
               type: 'HEAD',
               url: href,
@@ -35,12 +35,13 @@
               },
               error: function(xhr, ajaxOptions, thrownError) {
                 if (xhr.status == 404) {
-                  altpath = href.replace('', '')
+                  altpath = href.replace('https://xnifty.github.io/', '')
                   $('a[href="' + href + '"]').addClass("badlink");
                   $('a[href="' + altpath + '"]').addClass("badlink");
                 }
                 else {
-                  $('a[href="' + href + '"]').addClass("goodlink");
+                  $('a[href^="' + href + '"]').addClass("goodlink");
+                  $('a[id="descriptionid"]').addClass("goodlink");
                 }
               }
             });
@@ -61,7 +62,7 @@
         <a href="/"><img src="/assets/images/logo.png">
           <h1>xNifty</h1>
         </a>
-        <p>Documentation for <a href="https://snoring.ninja" target="_blank">Snoring Ninja</a> projects by xNifty</p>
+        <p>Documentation for <a href="https://snoring.ninja" id="descriptionid">Snoring Ninja</a> projects by xNifty</p>
 
         
 

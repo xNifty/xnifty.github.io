@@ -34,7 +34,7 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
-a {
+a.goodlink {
   color:#39c;
   text-decoration:none;
 }
@@ -52,6 +52,15 @@ a small {
 
 a:hover small {
   color:#777;
+}
+
+a.badlink {
+  color:red;
+  text-decoration:none;
+}
+
+a.badlink:hover {
+  text-decoration: underline;
 }
 
 .wrapper {

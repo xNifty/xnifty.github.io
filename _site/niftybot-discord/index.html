@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--<title>xNifty by </title>-->
+    <title>Snoring Ninja Projects Documentation by xNifty</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="/assets/js/wiki-features.js"></script>
+    <script src="/assets/js/linkcheck.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        var links = [];
+          $('a').each(function() {
+            links.push( this.href ); 
+
+            var href = this.href;
+            $.ajax({
+              type: 'HEAD',
+              url: href,
+              success: function() {
+                $('a[href="' + href + '"]').addClass("goodlink");
+              },
+              error: function(xhr, ajaxOptions, thrownError) {
+                if (xhr.status == 404) {
+                  altpath = href.replace('http://localhost:4000/', '')
+                  $('a[href="' + href + '"]').addClass("badlink");
+                  $('a[href="' + altpath + '"]').addClass("badlink");
+                }
+                else {
+                  $('a[href="' + href + '"]').addClass("goodlink");
+                }
+              }
+            });      
+          });
+        });
+    </script>
+
+    
+
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="/"><img src="/assets/images/logo.png">
+          <h1>xNifty</h1>
+        </a>
+        <p>Documentation for <a href="https://snoring.ninja" target="_blank">Snoring Ninja</a> projects by xNifty</p>
+
+        
+
+        
+
+      
+        
+      </header>
+      <section>
+      <!--
+      <div id="tools-buttons" style="width: 100%; text-align: right">
+        
+        
+          <span class="tools-element"><a target="_blank" href="/edit/master/niftybot-discord/index.md">Edit</a></span>
+          
+          <span class="tools-element"><a target="_blank" href="http://prose.io/#/edit/master/niftybot-discord/index.md">Edit with Prose.io</a></span>
+          
+          <span class="tools-element"><a target="_blank" href="/commits/master/niftybot-discord/index.md">History</a></span>
+          <span class="tools-element"><a target="_blank" href="/blob/master/niftybot-discord/index.md">Source</a></span>
+        
+        
+        <!--
+        
+          <form method="GET" action="/search">
+            
+            <input type="text" name="q" placeholder="Text to search"><input type="submit" value="Search">
+          </form>
+        
+      </div>-->
+        
+      <!--<div id="toc"></div>-->
+ 
+      <div id="content">
+        <h1 id="welcome-to-git-wiki-demo">Welcome to git-wiki demo</h1>
+
+<p>This is a <a href="wiki/Demo.md">demo</a> of git-wiki theme for jekyll.</p>
+
+<p>it’s a full featured wiki powered by git, github pages and pull-requests!</p>
+
+<p>It means:</p>
+
+<ul>
+  <li>Improvements in the cooperative aspect: forks, pull-requests and roles.</li>
+  <li>You can customize your wiki as you want with style sheets and even changing the layout.</li>
+  <li>No databases! Only static files that can be downloaded in a few seconds.</li>
+  <li>Markdown and html mixed together!</li>
+  <li>History, revision comparison and everything you need from a wiki platform.</li>
+  <li>You can edit your pages with the standard git editor, prose.io (integrated) or any kind of editor you prefer.</li>
+</ul>
+
+<p>You can fork/copy the master branch now and start your wiki in just 1 minute.</p>
+
+<p>Then <a href="wiki/Showreel.md">share your wiki with us!</a> please.</p>
+
+<p><strong>Note:</strong>
+You can even include the github wiki as a submodule and enable the conf, but it’s an experimental feature and it implies less advantages and greater disadvantages for now.</p>
+
+<h2 id="installation-instructions">Installation instructions</h2>
+
+<ol>
+  <li>
+    <p>Fork or copy <a href="https://github.com/drassil/git-wiki">this repository</a></p>
+  </li>
+  <li>
+    <p>copy and rename _config.yml.dist in _config.yml changing settings inside</p>
+  </li>
+  <li>
+    <p>create your index.md in root directory</p>
+  </li>
+  <li>
+    <p>push your changes in your repository, then configure the github pages in your repository settings</p>
+  </li>
+  <li>
+    <p>Your wiki is ready!</p>
+  </li>
+</ol>
+
+<p><strong>Note:</strong></p>
+
+<p>We suggest the creation of a /wiki/ subfolder that collects all your .md pages (except index.md)</p>
+
+<h2 id="current-known-limitations">Current known limitations</h2>
+
+<ul>
+  <li>
+    <p>Non-existent wiki page links are not “<a href="wiki/red.md">red</a>”.</p>
+  </li>
+  <li>
+    <p>You can’t use the wiki link format: [[example]]. Please, use gh-pages links instead: [example](example)</p>
+  </li>
+</ul>
+
+<h2 id="customization">Customization</h2>
+
+<p>You can create following files in _includes folder to costumize git-wiki without patching original code:</p>
+
+<ul>
+  <li>head.html  -&gt; this file will be included in &lt;head&gt; tag allowing you to add css/js and any kind of head tags</li>
+  <li>sidebar.html -&gt; this file will be included in left sidebar allowing you to create your widgets</li>
+  <li>comments.html -&gt; this is mostly used to integrate social comments under page contents</li>
+  <li>footer.html -&gt; this file will be included in left side of the footer.</li>
+</ul>
+
+<h2 id="looking-for-collaboration">Looking for collaboration</h2>
+
+<p>Do you like this project? then, contact us via <a href="https://gitter.im/Drassil/general?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link">chat</a> , <a href="mailto:staff-drassil@googlegroups.com">email</a>  or send us a PR to improve it.</p>
+
+<p>Thank you!</p>
+
+<h2 id="components-used">Components used</h2>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/ghiculescu/jekyll-table-of-contents">jekyll-table-of-contents</a></p>
+  </li>
+  <li>
+    <p><a href="https://jquery.com/">jQuery</a></p>
+  </li>
+</ul>
+
+<p><a href="LICENSE">MIT LICENSE</a></p>
+
+
+      </div>
+        
+      
+
+      </section>
+      <footer>
+        
+
+        
+        <p><small>Hosted on GitHub Pages — Powered by <a href="https://github.com/Drassil/git-wiki">Git-Wiki</a> </small></p>
+        
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#toc').toc({ title: '<i>Contents</i>'});
+        });
+    </script>
+  </body>
+</html>

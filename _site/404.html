@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--<title>xNifty by </title>-->
+    <title>Snoring Ninja Projects Documentation by xNifty</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="/assets/js/wiki-features.js"></script>
+    <script src="/assets/js/linkcheck.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        var links = [];
+          $('a').each(function() {
+            links.push( this.href ); 
+
+            var href = this.href;
+            $.ajax({
+              type: 'HEAD',
+              url: href,
+              success: function() {
+                $('a[href="' + href + '"]').addClass("goodlink");
+              },
+              error: function(xhr, ajaxOptions, thrownError) {
+                if (xhr.status == 404) {
+                  altpath = href.replace('http://localhost:4000/', '')
+                  $('a[href="' + href + '"]').addClass("badlink");
+                  $('a[href="' + altpath + '"]').addClass("badlink");
+                }
+                else {
+                  $('a[href="' + href + '"]').addClass("goodlink");
+                }
+              }
+            });      
+          });
+        });
+    </script>
+
+    
+
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="/"><img src="/assets/images/logo.png">
+          <h1>xNifty</h1>
+        </a>
+        <p>Documentation for <a href="https://snoring.ninja" target="_blank">Snoring Ninja</a> projects by xNifty</p>
+
+        
+
+        
+
+      
+        
+      </header>
+      <section>
+      <!--
+      <div id="tools-buttons" style="width: 100%; text-align: right">
+        
+        
+          <span class="tools-element"><a target="_blank" href="/edit/master/404.md">Edit</a></span>
+          
+          <span class="tools-element"><a target="_blank" href="http://prose.io/#/edit/master/404.md">Edit with Prose.io</a></span>
+          
+          <span class="tools-element"><a target="_blank" href="/commits/master/404.md">History</a></span>
+          <span class="tools-element"><a target="_blank" href="/blob/master/404.md">Source</a></span>
+        
+        
+        <!--
+        
+          <form method="GET" action="/search">
+            
+            <input type="text" name="q" placeholder="Text to search"><input type="submit" value="Search">
+          </form>
+        
+      </div>-->
+        
+      <!--<div id="toc"></div>-->
+ 
+      <div id="content">
+        <p>Oh no, this page doesn’t exist!</p>
+
+      </div>
+        
+      
+
+      </section>
+      <footer>
+        
+
+        
+        <p><small>Hosted on GitHub Pages &mdash; Powered by <a href="https://github.com/Drassil/git-wiki">Git-Wiki</a> </p>
+        
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#toc').toc({ title: '<i>Contents</i>'});
+        });
+    </script>
+  </body>
+</html>

@@ -1,8 +1,8 @@
-title: git-wiki
-description: git-wiki is a jekyll theme originally based on jekyll-theme-minimal
-show_downloads: true
+title: xNifty
+description: Documentation for <a href="https://snoring.ninja" target="_blank">Snoring Ninja</a> projects by xNifty
+show_downloads: false
 git_branch: master
-logo_url:
+logo_url: /assets/images/logo.png
 google_analytics:
 theme: 
 wiki_folder: wiki
@@ -12,7 +12,11 @@ google_cse_token:
 custom_head: false
 custom_sidebar: false
 custom_footer: false
-gems:
+repository: xnifty/xnifty.github.io
+github: [metadata]
+kramdown:  
+  parse_block_html: true
+plugins:
   - jekyll-sitemap
   - jekyll-mentions
   - jemoji

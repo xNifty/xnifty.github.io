@@ -7,3 +7,4 @@
 * [Role Assignor](roleassignment)
 * [Config](configcommands)
 * [General Bot Commands](generalbotcommands)
+* [Logout](logout)

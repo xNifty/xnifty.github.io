@@ -11,4 +11,5 @@ The provided documentation is intended to be as in depth as possible, detailing 
 The bot is currently in active development and is constantly undergoing changes, but as of the latest stable version (alpha 1.0), this documentation should be up to date.
 
 ## Links
+* [Server Configuration Example][server-ini-example]
 * [cogs](cogs)

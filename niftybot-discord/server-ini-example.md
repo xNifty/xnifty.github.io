@@ -4,30 +4,30 @@ In case you may have generated your channel configuration file before a change t
 ---
 
 
-[ServerSettings]
-owner_id = your_discord_user_id
-server_id = discord_server_id
-
-[BotAdmins]
-bot_admin_users = NOT_SET
-bot_admin_roles = NOT_SET
-
-[RoleAssignment]
-role_list = NOT_SET
-enabled = False
-assignment_channel_id = NOT_SET
-
-[JoinPart]
-welcome_channel_id = NOT_SET
-member_join_enabled = False
-leave_channel_id = NOT_SET
-member_part_enabled = False
-
-[BettingGame]
-bet_channel_id = NOT_SET
-minimum_bet = NOT_SET
-enabled = False
-
-[ApiCommands]
-enabled = False
-api_channel_id = NOT_SET
+[ServerSettings]  
+owner_id = your_discord_user_id  
+server_id = discord_server_id  
+  
+[BotAdmins]  
+bot_admin_users = NOT_SET  
+bot_admin_roles = NOT_SET  
+  
+[RoleAssignment]  
+role_list = NOT_SET  
+enabled = False  
+assignment_channel_id = NOT_SET  
+  
+[JoinPart]  
+welcome_channel_id = NOT_SET  
+member_join_enabled = False  
+leave_channel_id = NOT_SET  
+member_part_enabled = False  
+  
+[BettingGame]  
+bet_channel_id = NOT_SET  
+minimum_bet = NOT_SET  
+enabled = False  
+  
+[ApiCommands]  
+enabled = False  
+api_channel_id = NOT_SET  

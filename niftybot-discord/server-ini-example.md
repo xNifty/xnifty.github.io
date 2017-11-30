@@ -12,6 +12,9 @@ server_id = discord_server_id
 bot_admin_users = NOT_SET  
 bot_admin_roles = NOT_SET  
   
+[ConfigSettings]  
+not_accepted_channel_id = NOT_SET  
+  
 [RoleAssignment]  
 role_list = NOT_SET  
 enabled = False  
@@ -30,4 +33,4 @@ enabled = False
   
 [ApiCommands]  
 enabled = False  
-api_channel_id = NOT_SET  
+api_channel_id = NOT_SET

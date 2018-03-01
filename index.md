@@ -1,4 +1,5 @@
-# Welcome to my GitHub Pages, documenting all my projects for [Snoring Ninja](https://snoring.ninja)
+# Welcome to my GitHub Pages
+### Documenting all my personal projects and everything I do under [Snoring Ninja](https://github.com/snoringninja)
 
 These pages will document everything I possibly can or feel the need to, in regards to: 
 

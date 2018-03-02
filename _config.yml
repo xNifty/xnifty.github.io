@@ -14,6 +14,7 @@ custom_sidebar: false
 custom_footer: false
 repository: xnifty/xnifty.github.io
 github: [metadata]
+include: ['_pages']
 kramdown:  
   parse_block_html: true
 plugins:

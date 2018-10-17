@@ -53,7 +53,7 @@
         
       </header>
       <section>
-      <!--
+        <!--
       <div id="tools-buttons" style="width: 100%; text-align: right">
         {{page.relative_path}}
         {% if site.use_github_wiki %}
@@ -68,7 +68,7 @@
           <span class="tools-element"><a target="_blank" href="{{ site.github.repository_url }}/commits/{{site.git_branch}}{{page.folder}}{{url | remove: '.html' | append: '.md'}}">History</a></span>
           <span class="tools-element"><a target="_blank" href="{{ site.github.repository_url }}/blob/{{site.git_branch}}{{page.folder}}{{url | remove: '.html' | append: '.md'}}">Source</a></span>
         {% endif %}
-
+        
         {% if site.google_cse_token %}
           <script>
           (function() {
@@ -88,15 +88,15 @@
             {% if site.use_github_wiki %}
               <input type="hidden" name="type" value="Wikis">
             {% else %}
-              <!-- <input type="hidden" name="l" value="Markdown"> -->
+              <!-- <input type="hidden" name="l" value="Markdown">
               <input type="hidden" name="q[]" value="path:/{{ site.wiki_folder }}">
             {% endif %}
             <input type="submit" value="Search">
           </form>
         {% endif %}
-      </div>-->
+      </div>
         
-      <!--<div id="toc"></div>-->
+      <div id="toc"></div> -->
  
       <div id="content">
         {{ content }}

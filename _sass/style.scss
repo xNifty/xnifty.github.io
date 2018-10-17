@@ -105,10 +105,13 @@ img {
 }
 
 header {
-  width:270px;
-  float:left;
-  position:fixed;
-  -webkit-font-smoothing:subpixel-antialiased;
+  width: 272px;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  overflow-y: auto;
+  overflow-x: auto;
+  max-height: 100%;
 }
 
 header .downloads {
